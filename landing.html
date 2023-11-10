@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spices</title>
+    <link rel="stylesheet" href="">
+    <!--https://getbootstrap.com/docs/5.0/getting-started/introduction/-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--style-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Onest&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Onest', sans-serif;
+        }
+
+        #navbar {
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            padding: .5rem 5rem;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, .5);
+            /* background: black; */
+            background: #F9F1F0;
+        }
+
+        .navbar .navbar-brand {
+            font-size: 35px;
+            font-weight: 800;
+            color: black !important;
+        }
+
+        #navbarSupportedContent a {
+            color: black;
+            border-bottom: 2px solid transparent;
+            padding: 20px;
+        }
+
+        #navbarSupportedContent a:hover {
+            border-bottom: 2px solid black;
+        }
+
+        #navbarSupportedContent button {
+            /* background: #f8f9f8; */
+            background: black;
+            color: whitesmoke;
+            width: 5rem;
+            border-radius: 15px;
+            height: 50px;
+            width: 100px;
+        }
+
+        section {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*-----------------------home------------------*/
+
+        #home {
+            background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .4)), url(D:/Home/mrc/perfume/img31.jpg);
+            background-size: cover;
+            background-position: center;
+            flex-direction: column;
+        }
+
+        #home h1 {
+            font-size: 100px;
+            color: white;
+            letter-spacing: 3px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            /* 3d eggect-----*/
+            text-shadow: 0px 1px 0px #ccc,
+                0px 2px 0px #ccc,
+                0px 3px 0px #ccc,
+                0px 4px 0px #ccc,
+                0px 5px 0px #ccc,
+                0px 6px 0px #ccc,
+                0px 7px 0px #ccc;
+        }
+
+        #home p {
+            font-size: 18px;
+            color: #ccc;
+        }
+
+        #home .input-group {
+            width: 40%;
+            height: 45px;
+        }
+
+        .signin {
+            background: #F1B4BB !important;
+            color: #fff !important;
+            box-shadow: 2px 4px 5px rgba(249, 240, 240, 0.3);
+        }
+
+        /*------------------About-------------------*/
+
+        #about {
+            /*background: linear-gradient(to right,#ea1d6f,#ebf66b 100%);*/
+            /* background: linear-gradient(to right, #e9e3e5, #171716 100%); */
+            background-color: white;
+        }
+
+        #about h1 {
+            font-weight: 800;
+            font-size: 50px;
+            color: rgb(3, 3, 3);
+
+        }
+
+        #about p {
+            color: #040404;
+        }
+
+        #about img {
+            height: 60%;
+            margin-left: 20%;
+            margin-top: 15%;
+        }
+
+        /*---------------------producta----------------------*/
+
+        #product {
+            /* background: #e5e5e5; */
+            background: #F1B4BB;
+        }
+
+        #product h1 {
+            font-size: 50px;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: white;
+        }
+
+        #product img {
+            height: 200px;
+            width: 300px;
+        }
+
+        .card {
+            width: 350px;
+            height: 330px;
+            margin-bottom: 30px;
+            /*background: #e5e5e5 !important;
+            border: none !important;*/
+            box-shadow: 15px 20px 20px rgba(0, 0, 0, .3),
+                insert 4px 4px 4px white;
+            border-radius: 20px !important;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 60px;
+            transition: .2s;
+
+        }
+
+        .card:hover {
+            box-shadow: inset 5px 5px 10px rgba(0, 0, 0, .3),
+                insert -4px -4px 10px white;
+            transition: .2s;
+            cursor: pointer;
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        /*-----------------------contact us----------------------*/
+        #contact img {
+            height: 70%;
+            width: 60%;
+        }
+
+        .boxs {
+            width: 80% !important;
+
+            margin-top: 10%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10%;
+
+        }
+
+        #contact input {
+            margin: 10px 0px;
+
+        }
+
+        #contact textarea {
+            margin: 10px 0px;
+
+        }
+
+        /* ----------------------Developer---------------------- */
+
+        .team {
+            background: #F1B4BB;
+            width: 100%;
+            /*padding: 100px 0px; */
+
+
+        }
+
+        .title h2 {
+            color: white;
+            font-size: 75px;
+            width: 1130px;
+            margin: 30px auto;
+            text-align: center;
+            padding-top: ;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* padding-left: 10%; */
+            min-height: 400px;
+
+        }
+
+        .cards {
+            height: 365px;
+            width: 335px;
+            padding: 20px 35px;
+            background: white;
+            border-radius: 20px;
+            margin: 15px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .cards i {
+            font-size: 50px;
+            display: block;
+            text-align: center;
+            margin: 25px 0px;
+            /* color: #f9004d; */
+        }
+
+        h5 {
+            color: black;
+            font-size: 30px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .para p {
+            color: black;
+            font-size: 16px;
+            line-height: 27px;
+            margin-bottom: 25px;
+        }
+
+        .cards .button {
+            background-color: #F1B4BB;
+            color: black;
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 9px 30px;
+            border-radius: 30px;
+            transition: .4s;
+        }
+
+        .cards .button:hover {
+            background-color: transparent;
+            border: 2px solid #F1B4BB;
+            cursor: pointer;
+        }
+
+        /* -----------------------footer---------------------- */
+
+        footer {
+            width: 100%;
+            height: 30px;
+            background: rgba(0, 0, 0, .8);
+            margin-top: -30px;
+            text-align: center;
+            color: white;
+            padding: 3px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">PERFUMES</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Middle Part-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto "><!--centre align-->
+                    <li class="nav-item">
+                        <a class="nav-link " href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#product">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#contact">Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#Team">Developer</a>
+                    </li>
+                </ul>
+                <button class="btn"><a href="D:\Home\mrc\perfume\login.html"
+                        style="color: white; text-decoration: none; padding: 0;">Sign in</a></button>
+
+                <!--Search bar-
+                    <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>-->
+            </div>
+        </div>
+    </nav>
+
+    <!--HOme-->
+    <section id="home">
+        <h1 class="text-center">FRAGRANCE</h1>
+        <p>Variety's the very PERFUMES only with natural ingridents. Try once be our fan for whole life.</p>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Login here...">
+            <button class="btn signin">Get Started</button>
+        </div>
+    </section>
+
+    <!---About-->
+
+    <section id="about">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <img src="D:\Home\mrc\perfume\img5.jpg" class="img-fluid">
+                </div>
+                <div class="col-lg-6 col-md-6 col-12 p-lg-5 p-2 my-5">
+                    <h1>About Us</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt ipsum dignissimos
+                        molestias voluptate at, debitis itaque inventore, facere repellat perspiciatis sequi ad iste
+                        ipsam atque excepturi. Nihil, velit laudantium.Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Cupiditate incidunt ipsum dignissimos
+                        molestias voluptate at, debitis itaque inventore, facere repellat perspiciatis sequi ad iste
+                        ipsam atque excepturi. Nihil, velit laudantium.Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Cupiditate incidunt ipsum dignissimos
+                        molestias voluptate at, debitis itaque inventore, facere repellat perspiciatis sequi ad iste
+                        ipsam atque excepturi. Nihil, velit laudantium.Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Cupiditate incidunt ipsum dignissimos
+                        molestias voluptate at, debitis itaque inventore, facere repellat perspiciatis sequi ad iste
+                        ipsam atque excepturi. Nihil, velit laudantium.Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Cupiditate incidunt ipsum dignissimos
+                        molestias voluptate at, debitis itaque inventore, facere repellat perspiciatis sequi ad iste
+                        ipsam atque excepturi. Nihil, velit laudantium.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!---product-->
+
+    <section id="product">
+        <div class="container m-5">
+            <h1 class="text-center my-5">OUR PRODUCTS</h1>
+            <div class="row">
+                <!--card 1-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <!--code-->
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img6.jpg" class="card-img-top">
+                        <div class="card-body ">
+                            <h5 class="card-title">Rose</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 2-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img7.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Prose</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 3-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img8.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Kundan set</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 4-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img9.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Carbon</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 5-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img10.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Sky cold</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 6-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img11.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Lotus</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 7-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <!--code-->
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img12.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Skin skilk</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 8-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img13.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Star</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 9-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img14.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Rose </h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 10-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img15.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"> something something</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 11-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img16.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Secret</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 12-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img17.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Denver</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 1-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <!--code-->
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img18.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Chandan</h5>
+                            <a href="#" class="btn signin   ">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 2-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img19.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Glam</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 3-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img20.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Whisky Smoke</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 4-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img21.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Black Jack</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 5-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img22.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Denver</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 6-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img23.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Davidoff</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 7-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <!--code-->
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img24.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Wild Stone</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 8-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img25.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Secret</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+                <!--card 9-->
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="card">
+                        <img src="D:\Home\mrc\perfume\img26.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Foog</h5>
+                            <a href="#" class="btn signin">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end-->
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!--contact us-->
+
+    <section id="contact">
+        <div class="container boxs">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <img src="D:\Home\mrc\perfume\img29.avif" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h1>CONTACT US</h1>
+                    <form class="mb-3">
+                        <input type="text" class="form-control" placeholder="enter your name">
+                        <input type="email" class="form-control" placeholder="enter your email">
+                        <textarea class="form-control" placeholder="Enter your message."></textarea>
+                        <button class="btn signin">Send Message</button>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!------------------Developer Team-------------------->
+
+    <section>
+        <div class="team" id="Team">
+            <div class="service">
+                <div class="title">
+                    <h2>Developer Team</h2>
+                </div>
+
+                <div class="box">
+                    <div class="cards">
+                        <i class="fa-solid fa-bars"></i>
+                        <h5>Mrunal Chaudhari</h5>
+                        <div class="para">
+                            <p>BCA (2023-2024)</p>
+                            <p>chaudharimrunal@gmail.com</p>
+                            <p>Skills: HTML,CSS,Boostrap</p>
+
+
+                            <p>
+                                <a class="button" href="#">Read More</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cards">
+                        <i class="fa-solid fa-user"></i>
+                        <h5>Jidnysa Chaudhari</h5>
+                        <div class="para">
+                            <p>BCA (2023-2024)</p>
+                            <p>jidnysachaudhari698@gmail.com</p>
+                            <p>Skills: HTML,CSS,Boostrap</p>
+
+
+                            <p>
+                                <a class="button" href="#">Read More</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cards">
+                        <i class="fa-solid fa-bell"></i>
+                        <h5>Vishaka Chaudhari</h5>
+                        <div class="para">
+                            <p>BCA (2023-2024)</p>
+                            <p>vishakachaudhari47@gmail.com</p>
+                            <p>Skills: HTML,CSS,Boostrap</p>
+
+                            <p>
+                                <a class="button" href="#">Read More</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---footer-->
+
+    <footer>Copyrights @frontendForever 2023</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
